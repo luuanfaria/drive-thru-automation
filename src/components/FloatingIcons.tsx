@@ -10,13 +10,13 @@ export default function FloatingIcons({
   return (
     <div className="fixed flex bottom-4 right-12 z-50 items-center">
       <button onClick={resetOrder}>
-        <XCircle size={38} weight="fill" color="#333" />
+        <XCircle size={38} weight="fill" color="#333" alt="Cancel Order" />
       </button>
       <button
         onClick={resetSelectedCategory}
         className="flex w-8 h-8 bg-dark rounded-full items-center justify-center"
       >
-        <List size={18} weight="fill" color="#FFF" />
+        <List size={18} weight="fill" color="#FFF" alt="Show Menu" />
       </button>
     </div>
   );
