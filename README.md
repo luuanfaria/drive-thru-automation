@@ -1,6 +1,6 @@
 # Vox AI Test Project
 
-**Live Site Link:** [Vox AI Test Project](https://drive-thru-automation-luuanfaria.vercel.app/)
+**Demo:** [Vox AI Test Project](https://drive-thru-automation-luuanfaria.vercel.app/)
 
 ## About the Project
 
