@@ -3,20 +3,36 @@
 import Link from "next/link";
 import { useEffect } from "react";
 
+type FinishProps = {
+  audioPath: string;
+  delay: number;
+  redirectPath: string;
+};
+
+const playAudioWithDelay = ({
+  audioPath,
+  delay,
+  redirectPath,
+}: FinishProps) => {
+  const audio = new Audio(audioPath);
+  audio.play();
+
+  const timeoutId = setTimeout(() => {
+    window.location.href = redirectPath;
+  }, delay);
+
+  return () => {
+    clearTimeout(timeoutId);
+  };
+};
+
 export default function Finish() {
   useEffect(() => {
-    const audio = new Audio("/voice/enjoy.wav");
-    audio.play();
-
-    const delay = 5000;
-
-    const timeoutId = setTimeout(() => {
-      window.location.href = "/";
-    }, delay);
-
-    return () => {
-      clearTimeout(timeoutId);
-    };
+    return playAudioWithDelay({
+      audioPath: "/voice/enjoy.wav",
+      delay: 5000,
+      redirectPath: "/",
+    });
   }, []);
 
   return (
