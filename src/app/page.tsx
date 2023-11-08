@@ -5,18 +5,18 @@ import Link from "next/link";
 
 import SmashBurguerImage from "../../public/image/smash-burger.jpg";
 import Voice from "@/components/Voice";
-import { useEffect } from "react";
+import { useState } from "react";
 
 export default function Home() {
+  const [isPlaying, setIsPlaying] = useState(false);
+
   const playVoice = () => {
     const audio = new Audio("/voice/welcome-voice.wav");
 
     audio.play();
+    audio.onplay = () => setIsPlaying(true);
+    audio.onended = () => setIsPlaying(false);
   };
-
-  useEffect(() => {
-    playVoice();
-  }, []);
 
   return (
     <div className="flex justify-center items-center min-h-screen">
@@ -43,8 +43,11 @@ export default function Home() {
           src={SmashBurguerImage}
           width={320}
           height={320}
+          priority
         />
-        <Voice />
+        <div onClick={playVoice} className="cursor-pointer">
+          <Voice isPlaying={isPlaying} />
+        </div>
       </div>
     </div>
   );

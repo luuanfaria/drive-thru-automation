@@ -17,7 +17,10 @@ export default function RootLayout({
 }) {
   return (
     <html lang="en">
-      <body className={`font-${inter.className} font-${anton.className}`}>
+      <body
+        suppressHydrationWarning={true}
+        className={`font-${inter.className} font-${anton.className}`}
+      >
         {children}
       </body>
     </html>
