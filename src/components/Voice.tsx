@@ -1,7 +1,11 @@
 import { Waveform } from "@phosphor-icons/react/dist/ssr";
 import styles from "../styles/wave.module.css";
 
-export default function Voice({ isPlaying }: { isPlaying: boolean }) {
+type VoiceProps = {
+  isPlaying: boolean;
+};
+
+export default function Voice({ isPlaying }: VoiceProps) {
   const waveClasses = isPlaying ? styles["wave-animation"] : "";
   return (
     <div
