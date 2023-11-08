@@ -6,6 +6,7 @@ import Link from "next/link";
 import SmashBurguerImage from "../../public/image/smash-burger.jpg";
 import Voice from "@/components/Voice";
 import { useState } from "react";
+import { mockOrder } from "@/mocks/order";
 
 export default function Home() {
   const [isPlaying, setIsPlaying] = useState(false);
@@ -31,7 +32,10 @@ export default function Home() {
           </Link>
           <p>or</p>
           <Link
-            href="/order"
+            href={{
+              pathname: "/order",
+              query: { order: JSON.stringify(mockOrder) },
+            }}
             className="bg-darkest text-white py-1 px-3 rounded-lg text-center items-center"
           >
             order?

@@ -1,6 +1,6 @@
 "use client";
 
-import { useState } from "react";
+import { useEffect, useState } from "react";
 
 import CategoryMenu from "@/components/CategoryMenu";
 import Menu from "@/components/Menu";
@@ -8,6 +8,8 @@ import OrderSummary from "@/components/OrderSummary";
 import { products } from "@/mocks/products";
 import { Order, initialOrder } from "@/types/order";
 import Voice from "@/components/Voice";
+import { useSearchParams } from "next/navigation";
+import { mockOrder } from "@/mocks/order";
 
 export default function Order() {
   const [order, setOrder] = useState<Order>(initialOrder);
@@ -24,6 +26,18 @@ export default function Order() {
   const resetOrder = () => {
     setOrder(initialOrder);
   };
+
+  const searchParams = useSearchParams();
+
+  useEffect(() => {
+    const params = searchParams.get("order");
+
+    if (params) {
+      const parsedOrder = JSON.parse(params);
+      console.log(parsedOrder);
+      setOrder(parsedOrder);
+    }
+  }, [searchParams]);
 
   return (
     <div className="flex flex-1 justify-between items-center mx-12">

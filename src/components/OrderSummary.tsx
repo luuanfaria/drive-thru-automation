@@ -19,14 +19,16 @@ export default function OrderSummary({ order }: { order: Order }) {
       <div className="flex flex-col justify-between h-full">
         <div className="px-4">
           {order.items.length > 0 ? (
-            order.items.map((item) => (
-              <OrderItem
-                key={item.product.id}
-                quantity={item.quantity}
-                name={item.product.name}
-                price={item.price}
-              />
-            ))
+            order.items.map((item) => {
+              return (
+                <OrderItem
+                  key={item.product.id}
+                  quantity={item.quantity}
+                  name={item.product.name}
+                  price={item.price}
+                />
+              );
+            })
           ) : (
             <p className="text-center text-dark">
               Your order is currently empty.
