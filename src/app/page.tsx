@@ -11,12 +11,17 @@ import { mockOrder } from "@/mocks/order";
 export default function Home() {
   const [isPlaying, setIsPlaying] = useState(false);
 
-  const playVoice = () => {
+  const handlePlayVoice = () => {
     const audio = new Audio("/voice/welcome-voice.wav");
 
     audio.play();
     audio.onplay = () => setIsPlaying(true);
     audio.onended = () => setIsPlaying(false);
+  };
+
+  const orderLinkProps = {
+    pathname: "/order",
+    query: { order: JSON.stringify(mockOrder) },
   };
 
   return (
@@ -32,10 +37,7 @@ export default function Home() {
           </Link>
           <p>or</p>
           <Link
-            href={{
-              pathname: "/order",
-              query: { order: JSON.stringify(mockOrder) },
-            }}
+            href={orderLinkProps}
             className="bg-darkest text-white py-1 px-3 rounded-lg text-center items-center"
           >
             order?
@@ -49,7 +51,7 @@ export default function Home() {
           height={320}
           priority
         />
-        <div onClick={playVoice} className="cursor-pointer">
+        <div onClick={handlePlayVoice} className="cursor-pointer">
           <Voice isPlaying={isPlaying} />
         </div>
       </div>

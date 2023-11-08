@@ -10,7 +10,7 @@ type VoiceProps = {
 
 export default function Voice({ isPlaying }: VoiceProps) {
   const waveClasses = isPlaying ? styles["wave-animation"] : "";
-  const [hasAction, setHasAction] = useState(false);
+  const [hasAction, setHasAction] = useState(true);
 
   return (
     <div>
@@ -18,7 +18,10 @@ export default function Voice({ isPlaying }: VoiceProps) {
         <div>
           <div className="flex gap-1 justify-center items-center text-center text-2xl font-extralight">
             <button
-              onClick={() => console.log("Do this")}
+              onClick={() => {
+                const audio = new Audio("/voice/how-about-dessert.wav");
+                audio.play();
+              }}
               className="bg-brand text-white py-1 px-3 rounded-lg text-center items-center"
             >
               How about a dessert?
