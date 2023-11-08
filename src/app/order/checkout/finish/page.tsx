@@ -5,7 +5,10 @@ import { useEffect } from "react";
 
 export default function Finish() {
   useEffect(() => {
-    const delay = 3000;
+    const audio = new Audio("/voice/enjoy.wav");
+    audio.play();
+
+    const delay = 5000;
 
     const timeoutId = setTimeout(() => {
       window.location.href = "/";
