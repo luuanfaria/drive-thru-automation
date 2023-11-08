@@ -2,7 +2,6 @@ import Image from "next/image";
 import Container from "./Container";
 import { payment } from "@/mocks/payment";
 import Link from "next/link";
-import { ArrowCircleLeft } from "@phosphor-icons/react/dist/ssr";
 
 export default function PayMenu() {
   return (

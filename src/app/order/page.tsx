@@ -7,6 +7,7 @@ import Menu from "@/components/Menu";
 import OrderSummary from "@/components/OrderSummary";
 import { products } from "@/mocks/products";
 import { Order, initialOrder } from "@/types/order";
+import Voice from "@/components/Voice";
 
 export default function Order() {
   const [order, setOrder] = useState<Order>(initialOrder);

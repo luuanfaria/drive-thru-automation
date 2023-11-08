@@ -1,5 +1,4 @@
 import Banner from "@/components/Banner";
-import FloatingIcons from "@/components/FloatingIcons";
 import Voice from "@/components/Voice";
 
 export default function LayoutOrder({
