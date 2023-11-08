@@ -16,7 +16,7 @@ export default function LayoutOrder({
         {children}
       </main>
       <footer className="my-4 m-auto">
-        <Voice />
+        <Voice isPlaying={false} />
       </footer>
     </div>
   );
