@@ -62,7 +62,7 @@ You can check all the development planning details and milestones on our [GitHub
 
 ## Requirements
 
-To develop and run the project locally, you will need to have [Node.js](https://nodejs.org/) and [Yarn](https://classic.yarnpkg.com/en/) installed.
+To develop and run the project locally, you will need to have [Node.js](https://nodejs.org/) and [Npm](https://classic.yarnpkg.com/en/) installed.
 
 ## Installation
 
