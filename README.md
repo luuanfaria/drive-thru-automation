@@ -1,36 +1,93 @@
-This is a [Next.js](https://nextjs.org/) project bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app).
+# Vox AI Test Project
 
-## Getting Started
+**Live Site Link:** [Vox AI Test Project](https://drive-thru-automation-luuanfaria.vercel.app/)
 
-First, run the development server:
+## About the Project
 
-```bash
-npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
-```
+This is a test project for Vox AI, aimed at creating a web/kiosk page for voice-activated orders. The project utilizes modern web technologies and AI voice interactions.
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+## Folder Structure
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+The project folder structure is organized as follows:
 
-This project uses [`next/font`](https://nextjs.org/docs/basic-features/font-optimization) to automatically optimize and load Inter, a custom Google Font.
+- **public**: This folder contains public files such as images, icons, and audio files.
 
-## Learn More
+  - **icon**: Icons used in the project.
+  - **image**: Images used in the project.
+  - **voice**: AI voice files used for voice interactions.
 
-To learn more about Next.js, take a look at the following resources:
+- **src**: The main source code of the project.
+  - **app**: Application-specific components and pages.
+    - **order**: Pages related to orders.
+      - **layout.tsx**: Common layout for order pages.
+      - **page.tsx**: Main order page.
+      - **checkout**: Pages related to the checkout process.
+        - **page.tsx**: Order checkout page.
+    - **globals.css**: Global styles for the application.
+    - **layout.tsx**: Common layout for all application pages.
+    - **page.tsx**: Initial application page.
+  - **components**: Reusable components used across various parts of the application.
+    - **Banner.tsx**: Banner component.
+    - **CategoryMenu.tsx**: Category menu component.
+    - **Container.tsx**: Container component.
+    - **FloatingIcons.tsx**: Floating icons component.
+    - **Menu.tsx**: Menu component.
+    - **OrderItem.tsx**: Order item component.
+    - **OrderSummary.tsx**: Order summary component.
+    - **Voice.tsx**: AI voice control component.
+  - **mocks**: Simulated data used for development and testing.
+  - **types**: Data types used in the project.
+  - **utils**: Utility functions and helper functions.
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+## How to Use
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js/) - your feedback and contributions are welcome!
+Users can interact with the application as follows:
 
-## Deploy on Vercel
+1. On the home page, users can click the voice button to play the AI voice.
+2. Users will be redirected to the order page, where they can add items to their order and view the order summary.
+3. Users can click "Checkout" to proceed with payment.
+4. There are two guide icons at the bottom right on the order route: one to return to the general items menu and another to cancel the operation.
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
+## To-Do
 
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/deployment) for more details.
+Up to this point, the project includes the following features and planned improvements:
+
+- Add the remaining AI voice interactions.
+- Implement animation on the voice button.
+- Add text guides above the voice button.
+
+## Development and Planning
+
+You can check all the development planning details and milestones on our [GitHub milestones page](https://github.com/luuanfaria/drive-thru-automation/milestones).
+
+## Requirements
+
+To develop and run the project locally, you will need to have [Node.js](https://nodejs.org/) and [Yarn](https://classic.yarnpkg.com/en/) installed.
+
+## Installation
+
+1. Clone the repository to your local machine.
+2. Navigate to the project folder in your terminal.
+3. Run the command `npm install` to install the dependencies.
+
+## Available Scripts
+
+- `npm run dev`: Starts the development server.
+- `npm run build`: Compiles the application for production.
+- `npm start`: Starts the application in a production environment.
+- `npm run lint`: Performs linting checks on the code.
+
+## Key Dependencies
+
+- [Next.js](https://nextjs.org/): React framework for web applications.
+- [Phosphor Icons](https://phosphoricons.com/): Icon library.
+
+---
+
+<p align="center">
+  <samp>
+    <a href="https://luuanfaria.dev">website</a> .
+    <a href="https://linkedin.com/in/luuanfaria">linkedin</a> .
+    <a href="https://twitter.com/luuanfariaf">twitter</a> .
+  </samp>
+</p>
